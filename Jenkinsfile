@@ -1,7 +1,10 @@
 pipeline {
 
- agent any
+ agent {
 
+ label 'workstation'
+
+ }
    stages {
 
     stage ('print hello world') {
