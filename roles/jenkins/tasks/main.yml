@@ -6,10 +6,20 @@
     url: http://172.31.80.156:8080
     user: chandra
     password: "{{jenkins_password}}"
-  loop: "{{ folder }}"
+  loop:
+    - CIpipeline
 
 
 - name: include the task pipeline
   ansible.builtin.include_tasks: pipeline.yml
-  loop: "{{ ci_pipeline_jobs }}"
+  loop:
+    - { name: "frontend" , dir: "CIpipeline" }
+    - { name: "cart" , dir: "CIpipeline" }
+    - { name: "catalogue" , dir: "CIpipeline" }
+    - { name: "user" , dir: "CIpipeline" }
+    - { name: "payment" , dir: "CIpipeline" }
+    - { name: "shipping" , dir: "CIpipeline" }
+
+
+
 
