@@ -1,13 +1,13 @@
-#ci_pipeline_jobs:
-#  - { name: "frontend" , dir: "CIpipeline" }
-#  - { name: "cart" , dir: "CIpipeline" }
-#  - { name: "catalogue" , dir: "CIpipeline" }
-#  - { name: "user" , dir: "CIpipeline" }
-#  - { name: "payment" , dir: "CIpipeline" }
-#  - { name: "shipping" , dir: "CIpipeline" }
-#
-#folder:
-#  - CIpipeline
-#
-#
-#
+ci_pipeline_jobs:
+  - { name: "frontend" , dir: "CIpipeline" }
+  - { name: "cart" , dir: "CIpipeline" }
+  - { name: "catalogue" , dir: "CIpipeline" }
+  - { name: "user" , dir: "CIpipeline" }
+  - { name: "payment" , dir: "CIpipeline" }
+  - { name: "shipping" , dir: "CIpipeline" }
+
+folder:
+  - CIpipeline
+
+
+
