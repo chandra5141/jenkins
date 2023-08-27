@@ -1,6 +1,11 @@
+- name: copy the config file
+  ansible.builtin.template:
+    src: folder.xml
+    dest: /tmp/job.xml
+
 - name: Create - folder {{item.dir}}
   community.general.jenkins_job:
-    config: "{{ lookup('file', 'templates/folder.xml') }}"
+    config: "{{ lookup('file', '/tmp/folder.xml') }}"
     name: "{{ item }}"
     url: http://172.31.80.156:8080
     user: chandra
