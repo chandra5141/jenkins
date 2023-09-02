@@ -2,7 +2,7 @@
   ansible.builtin.shell: java -jar /opt/jenkins-cli.jar -auth chandra:{{jenkins_password}} -s http://172.31.82.124:8080 -webSocket get-job {{item.dir}}/{{item.name}}
   register: out
   ignore_errors: yes
-  no_log: true
+#  no_log: true
 
 - name: copy the config file-"{{item.dir}}/{{item.name}}"
   ansible.builtin.template:
