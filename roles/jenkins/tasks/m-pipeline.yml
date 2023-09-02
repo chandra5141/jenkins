@@ -3,7 +3,7 @@
   register: out
   ignore_errors: yes
 
-- name: copy the config file
+- name: copy the config file-"{{item.dir}}/{{item.name}}"
   ansible.builtin.template:
     src: m-job.xml
     dest: /tmp/m-job.xml
