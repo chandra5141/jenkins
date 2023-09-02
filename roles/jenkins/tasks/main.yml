@@ -14,5 +14,7 @@
   loop: "{{ ci_pipeline_jobs }}"
 
 
-
+- name: include the task m-pipeline
+  ansible.builtin.include_tasks: s-pipeline.yml
+  loop: "{{ S_ci_pipeline_jobs }}"
 
