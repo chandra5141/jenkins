@@ -9,7 +9,9 @@ ci_pipeline_jobs:
 folder:
   - CIpipeline
   - INFRA
+  - CD
 
 
 S_ci_pipeline_jobs:
   - { name: "roboshop-infra" , dir: "INFRA" }
+  - { name: "roboshop_ansible" , dir: "CD" }
